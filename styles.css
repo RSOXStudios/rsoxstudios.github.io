@@ -1,6 +1,6 @@
 /* Base Styles */
 body {
-  background-color: #f0fdfc; /* soft mint */
+  background-color: #e6faff; /* light blue */
   color: #1e3a5f; /* deep blue for text */
   font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   margin: 0;
@@ -9,12 +9,12 @@ body {
 
 /* Header & Navigation */
 .navbar {
-  background-color: #d0f0f4; /* light aqua */
+  background: linear-gradient(to right, #e6faff, #b8f3e6, #f9e0ae); /* light blue → mint green → pastel orange */
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 2px solid #a0d8e0; /* bottom divider */
+  border-bottom: 2px solid #a0d8e0;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
@@ -52,14 +52,14 @@ body {
   display: block;
   padding: 0.5rem 1rem;
   text-decoration: none;
-  color: #1e7f6e; /* soft green */
+  color: #1e3a5f;
   font-weight: 500;
   transition: background-color 0.3s ease;
 }
 
 .nav-links a:hover {
-  background-color: #b8f3e6; /* mint hover */
-  color: #145c4c;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
 }
 
 /* Main Content */
