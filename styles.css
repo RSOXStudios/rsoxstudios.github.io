@@ -15,6 +15,7 @@ body {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05); /* gentle bottom shadow */
 }
 
 .logo {
@@ -22,6 +23,7 @@ body {
   font-weight: bold;
   color: #1e4e8c; /* calm blue */
   padding: 0.5rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* subtle text shadow */
 }
 
 .logo img {
@@ -52,6 +54,9 @@ main {
   padding: 2rem;
   max-width: 900px;
   margin: auto;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* soft shadow */
 }
 
 h1, h2 {
@@ -74,6 +79,7 @@ footer {
   padding: 1rem;
   font-size: 0.9rem;
   color: #2c3e50;
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.05); /* soft top shadow */
 }
 
 footer a {
@@ -93,16 +99,19 @@ footer a:hover {
   height: 24px;
   margin: 0 5px;
 }
-    margin: 1em 0;
-  }
 
-  .nav-links {
-    flex-direction: column;
-    gap: 1em;
-  }
+/* Buttons (if used) */
+button {
+  background-color: #2c7a7b;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+}
 
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+button:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
