@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>Sketch Cards | RSOX Studios</title>
-  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     .card-grid {
@@ -26,6 +27,7 @@
       color: #666;
       margin-top: 5px;
     }
+
     .tab-buttons {
       display: flex;
       gap: 10px;
@@ -34,74 +36,94 @@
     .tab-buttons button {
       padding: 10px 20px;
       cursor: pointer;
-      background-color: #eee;
       border: none;
       font-weight: bold;
+      border-radius: 5px 5px 0 0;
     }
     .tab-buttons button.active {
-      background-color: #ccc;
+      background: linear-gradient(to bottom, #f9a03f, #f7c873); /* Light orange */
+      color: #000;
     }
+    .tab-buttons button:not(.active) {
+      background: linear-gradient(to bottom, #a0c4ff, #cce5ff); /* Light blue */
+      color: #333;
+    }
+
     .tab-content {
       display: none;
+      border-top: 2px solid #ccc;
+      padding-top: 10px;
     }
     .tab-content.active {
       display: block;
+    }
+
+    .resource-links {
+      margin-bottom: 20px;
+    }
+    .resource-links .button {
+      margin-right: 10px;
+      padding: 8px 16px;
+      background-color: #eee;
+      border: none;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #333;
     }
   </style>
 </head>
 <body>
   <!-- Header -->
   <header class="navbar">
-    <div class="logo"><img src="/assets/logo.png" alt="RSOX Studios Logo"></div>
+    <div class="logo"><a href="RSOXStudios.github.io"><img src="assets/logo.png" alt="RSOX Studios Logo"></a></div>
     <nav>
       <ul class="nav-links">
         <li><a href="games.html">Games</a></li>
-        <li><a href="sketch-cards.html">Sketch Cards</a></li>
+        <li><a href="sketchcards">Sketch Cards</a></li>
         <li><a href="mailto:rsoxstudios@mail.com?subject=Game%20Suggestion">Suggest a Game</a></li>
       </ul>
     </nav>
   </header>
 
+  <!-- Banner Ads -->
+  <div class="banner-ad left-banner"></div>
+  <div class="banner-ad right-banner"></div>
+
   <!-- Main Content -->
   <main class="sketch-cards-page">
-    <section class="intro">
-      <h1>Sketch Cards</h1>
-      <p>Collect. Create. Plush-powered chaos awaits.</p>
-      <div class="resource-links">
-        <a href="guidelines.html" class="button">Submission Guidelines</a>
-        <a href="templates.html" class="button">View Templates</a>
-        <a href="assets/RSOX_Sketch_Card_Templates.zip" class="button">Download All Templates (.zip)</a>
-      </div>
-    </section>
+    <h1>Sketch Cards</h1>
+
+    <div class="resource-links">
+      <a href="assets/RSOX_Sketch_Card_Templates.zip" class="button">Download All Templates (.zip)</a>
+    </div>
 
     <!-- Tabs -->
     <section class="card-tabs">
       <div class="tab-buttons">
-        <button onclick="showTab('community')" class="active">Community Submissions</button>
-        <button onclick="showTab('rsox')">RSOX Studios Cards</button>
+        <button onclick="showTab('rsox')" class="active">RSOX Studios Cards</button>
+        <button onclick="showTab('community')">Community Submissions</button>
       </div>
 
-      <div id="community" class="tab-content active">
-        <h2>Community Submissions</h2>
+      <div id="rsox" class="tab-content active">
         <div class="card-grid">
           <div class="card">
-            <img src="cards/card001.png" alt="Scroll Sprint">
-            <h3>Scroll Sprint</h3>
+            <img src="cards/card-rsox001.png">
+            <div class="card-date">September 19, 2025</div>
+          </div>
+          <!-- Add more official cards here -->
+        </div>
+      </div>
+
+      <div id="community" class="tab-content">
+        <div class="card-grid">
+          <div class="card">
+            <img src="cards/card001.png">
+            <h3>Title</h3>
             <p>Created by: Guest Artist</p>
             <div class="card-date">September 19, 2025</div>
           </div>
           <!-- Add more community cards here -->
-        </div>
-      </div>
-
-      <div id="rsox" class="tab-content">
-        <h2>RSOX Studios Cards</h2>
-        <div class="card-grid">
-          <div class="card">
-            <img src="cards/card-rsox001.png" alt="RSOX Studios Card">
-            <div class="card-date">September 19, 2025</div>
-          </div>
-          <!-- Add more official cards here -->
         </div>
       </div>
     </section>
@@ -109,7 +131,7 @@
     <section class="add-card">
       <h2>Submit a Sketch Card</h2>
       <p>To submit a sketch card, please read the <a href="guidelines.html">Submission Guidelines</a> and email your completed card to <a href="mailto:rsoxstudios@mail.com">rsoxstudios@mail.com</a>.</p>
-      <p>Be sure to include your name (this can be a nickname), card title, and the image.</p>
+      <p>Be sure to include your name, card title, and attach the image file using the official template.</p>
     </section>
   </main>
 
@@ -118,9 +140,9 @@
     <p>&copy; 2025 RSOX Studios. All rights reserved.</p>
     <p>Email: <a href="mailto:rsoxstudios@mail.com">rsoxstudios@mail.com</a></p>
     <div class="social-icons">
-      <a href="https://x.com/rsoxstudios" target="_blank"><img src="/images/x-icon.png" alt="X" width="100px"></a>
-      <a href="https://bsky.app/profile/rsoxstudios" target="_blank"><img src="/images/bluesky-icon.png" alt="Bluesky" width="100px"></a>
-      <a href="https://rsoxstudios.newgrounds.com" target="_blank"><img src="/images/newgrounds-icon.jpg" alt="Newgrounds" width="100px"></a>
+      <a href="https://x.com/rsoxstudios" target="_blank"><img src="assets/x-icon.png" alt="X/Twitter"></a>
+      <a href="https://bsky.app/profile/rsoxstudios.bsky.social" target="_blank"><img src="assets/Bluesky-logo.png" alt="Bluesky"></a>
+      <a href="https://rsoxstudios.newgrounds.com" target="_blank"><img src="assets/portal-newgrounds-logo-website-music-tank-download-ico-e662d13aa72228ad32ede6b8f75fdfcb.png" alt="Newgrounds"></a>
     </div>
   </footer>
 
